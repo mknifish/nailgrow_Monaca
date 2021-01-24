@@ -1,0 +1,619 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-width: 0.1px;
+    border-color: blue;
+    box-sizing: border-box;
+}
+
+html,body{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border: none;
+    color:#8C8C8C;
+    font-family: "Hiragino Kaku Gothic ProN",
+                 "Hiragino Sans",
+                  sans-serif;
+    font-weight: 500;
+    overflow: hidden;
+}
+
+body{
+    background-color: #FFDCC3;
+    background-position : center;
+    background-repeat: no-repeat;
+    background-size:contain;
+}
+
+button, input, select, textarea {
+  font-family : inherit;
+  font-size   : 100%;
+}
+
+.wrap{
+    position: relative;
+    left: 1%;
+    top: 1%;
+    padding:1%;
+    width: 98%;
+    height: 98%;
+}
+
+header{
+    opacity: 0;
+    position: relative;
+    left: 0.5%;
+    top: 0.4%;
+    padding:1%;
+    width: 99%;
+    height: 10%;
+}
+
+/*カウント画面*/
+
+.btn_setting{
+    opacity: 0;
+    position: relative;
+    left: 85.5%;
+    top:8.8%;
+    width: 13.5%;
+    height: 84%;
+    font-size: 1em;
+    border-radius: 50%;
+    box-shadow: -5px -5px 3px 1px #ffffff, 5px 5px 3px 1px #DDE1EE;
+    background-image:url('./img/nag_settei_1208.png');
+    background-position : center;
+    background-repeat: no-repeat;
+    background-size:80%;
+}
+
+.container{
+    position: relative;
+    left: 0.5%;
+    margin-top: 1%;
+    padding:1%;
+    width: 99%;
+    height: 79%;
+}
+
+.box_counter{
+    position: relative;
+    left: 1%;
+    top: 0%;
+    margin-top: 0.5%;
+    padding:1%;
+    width: 98%;
+    height: 58%;
+}
+
+.circle_out{
+    opacity: 0;
+    position: relative;
+    left: 8%;
+    top: 0%;
+    margin: 1%;
+    padding:1%;
+    width: 80%;
+    height: 93%;
+    border-radius: 50%;
+    box-shadow: -5px -5px 3px 1px #ffffff, 5px 5px 3px 1px #DDE1EE;
+}
+.circle_out::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    margin: 1.5rem;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    box-shadow: -3px -3px 5px 5px #ffffff inset, 5px 5px 5px 5px #DDE1EE inset;
+    /*box-shadow: 25px 25px 30px 20px #DDE1EE inset, -5px -5px 10px 10px #ffffff inset;*/
+}
+
+.circle_in{
+    opacity: 0;
+    position: relative;
+    left: 26%;
+    top: 14.5%;
+    margin-top: 10%;
+    padding:1%;
+    z-index: 1;
+    width: 48%;
+    height: 50%;
+    border-radius: 50%;
+    box-shadow: -5px -5px 3px 1px #ffffff, 5px 5px 3px 1px #DDE1EE;
+    /*box-shadow: -5px -5px 20px 10px #ffffff, 25px 25px 25px 20px #DDE1EE;*/
+}
+
+.progress{
+    position: absolute;
+    top: 0%;
+    left:6.9%;
+    height: 100%;
+    z-index: 1;
+    transform: rotate(-90deg);
+}
+
+.title{
+    position: relative;
+    left: 25%;
+    top: 5%;
+    width: 50%;
+    height: 20%;
+    text-align: center;
+    font-size: 1em;
+    /*background-image: url(./img/nag_day_1208.png);
+    background-position : center;
+    background-repeat: no-repeat;
+    background-size:80%;*/
+}
+
+.num_day{
+    position: relative;
+    left: 11%;
+    top: -7%;
+    width: 78%;
+    height: 60%;
+    text-align: center;
+}
+
+.numerator_day{
+    font-size: 4em;
+    color:transparent;
+    background-position : center;
+    background-repeat: no-repeat;
+    background-size:80%;
+}
+
+/*.bar_day{
+    font-size: 1em;
+}*/
+
+.denominator_day{
+    font-size: 1em;
+    color:transparent;
+    background-position : center;
+    background-repeat: no-repeat;
+    background-size:100%;
+}
+
+.box_button{
+    opacity: 0;
+    position: relative;
+    left: 1%;
+    top: 1%;
+    margin-top: 2%;
+    padding:1%;
+    width: 98%;
+    height: 18%;
+}
+
+.btn_win{
+    position: relative;
+    left: 8%;
+    top: 10%;
+    height: 85%;
+    width: 22%;
+    font-size: 1em;
+    border-radius: 50%;
+    box-shadow: -5px -5px 3px 1px #ffffff, 5px 5px 3px 1px #DDE1EE;
+    color: #FF998D;
+    background-image:url('./img/nag_win_1208.png');
+    background-position : center;
+    background-repeat: no-repeat;
+    background-size:70%;
+}
+
+.btn_lose{
+    position: relative;
+    left: 51%;
+    top: 10%;
+    height: 85%;
+    width: 22%;
+    font-size: 1em;
+    border-radius: 50%;
+    box-shadow: -5px -5px 3px 1px #ffffff, 5px 5px 3px 1px #DDE1EE;
+    background-image:url('./img/nag_lose_1208.png');
+    background-position : center;
+    background-repeat: no-repeat;
+    background-size:70%;
+}
+
+.box_message{
+    position: relative;
+    left: 1%;
+    top: 1.5%;
+    margin-top: 2%;
+    padding-left:7%;
+    padding-right: 7%;
+    width: 98%;
+    height: 20%;
+    text-align: center;
+    font-size: 0.8em;
+    letter-spacing:0.03em; 
+    line-height:1.75em;
+}
+
+.message{
+    position: relative;
+    top: 20%;
+}
+
+footer{
+    position: relative;
+    left: 0.5%;
+    top: 1%;
+    padding:1%;
+    width: 99%;
+    height: 10%;
+}
+
+.btn_home{
+    opacity: 0;
+    position: relative;
+    left: 13%;
+    top: 13%;
+    height: 85%;
+    width: 22%;
+    font-size: 1em;
+    border-radius: 50%;
+}
+
+.badges{
+    position: absolute;
+    left: 40%;
+    top: 1%;
+    height: 100%;
+    width: 60%;
+	color: #fff                                        
+}
+
+
+.btn_badges{
+    opacity: 0;
+    position: relative;
+    left: 50%;
+    top: 5%;
+    height: 85%;
+    width: 22%;
+    font-size: 1em;
+    z-index:1;
+    border-radius: 50%;
+}
+
+#chartfill{
+    animation: chart 1000ms linear forwards;
+}
+
+/*設定画面*/
+
+.box_message_setting{
+    position: relative;
+    left: 1%;
+    top: 1%;
+    padding-left:5%;
+    padding-right: 5%;
+    width: 98%;
+    height: 15%;
+    text-align: center;
+    font-size: 1em;
+}
+
+.message_setting{
+    position: relative;
+    top: 29%;
+}
+
+.box_select{
+    position: relative;
+    left: 1%;
+    top: 1%;
+    margin-top: 2%;
+    padding:1%;
+    width: 98%;
+    height: 30%;
+}
+
+.select_shadow{
+    position: relative;
+    left: 11%;
+    top: 11%;
+    height:78%;
+    width: 81%;
+    /*border-radius: 15%;
+    box-shadow: -5px -5px 3px 1px #ffffff, 5px 5px 3px 1px #DDE1EE;*/
+}
+
+
+select{
+    position: relative;
+    left: 8%;
+    top: 20%;
+    height: 85%;
+    width: 75%;
+    border-radius: 15%;
+    text-align: center;
+    text-indent:15%;
+    font-size: 3.6em;
+    background: transparent;
+    color: #8C8C8C;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    font-family: Arial, sans-serif;
+    font-weight: 600;
+}
+
+.box_button_setting{
+    position: relative;
+    left: 1%;
+    top: 1%;
+    margin-top: 2%;
+    padding:1%;
+    width: 98%;
+    height: 50%;
+}
+
+.btn_start_setting{
+    opacity: 0;
+    position: relative;
+    left: 32%;
+    top: 51%;
+    height:52%;
+    width: 37%;
+    font-size: 2em;
+    border-radius: 50%;
+    box-shadow: -5px -5px 3px 1px #ffffff, 5px 5px 3px 1px #DDE1EE;
+    color: #8C8C8C;
+    background-image:url('./img/nag_start_1208.png');
+    background-position : center;
+    background-repeat: no-repeat;
+    background-size:80%;
+}
+
+.container_badges{
+    position: relative;
+    padding:1%;
+    width: 99%;
+    height: 89.4%;
+}
+
+.box_badges{
+    position: relative;
+    top: 1%;
+    padding:4% 4% 1% 5%;
+    width: 100%;
+}
+
+.box_badges img{
+    position: relative;
+    margin: 1.6259% 0% 0% 0%;
+    padding: 3%;
+    width: 20%;
+    height: auto;
+}
+
+.box_message_badges{
+    opacity: 0;
+    position: relative;
+    left: 1%;
+    margin-top: 15%;
+    padding-left:7%;
+    padding-right: 7%;
+    width: 98%;
+    height: 24%;
+    text-align: center;
+    font-size: 1em;
+}
+
+.message_badges{
+    position: relative;
+    top: 2%;
+    margin:  0% 2% ;
+    font-size: 0.8em;
+
+}
+
+.num_gorl{
+    position: relative;
+    top: 2%;
+    font-size:3em;
+}
+
+/*ポップアップ画面*/
+
+.popup {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: .3s;
+}
+.popup.is-show {
+  opacity: 1;
+  visibility: visible;
+}
+.popup-inner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  width: 80%;
+  max-width: 80%;
+  z-index: 2;
+}
+.popup-inner img {
+  width: 100%;
+}
+.close-btn {
+    position: absolute;
+    left: 5%;
+    top: 1%;
+    height: 10%;
+    width: 10%;
+    outline:none;
+    border: none;
+    background-image:url('./img/nag_x_1208.png');
+    background-color: transparent;
+    background-position : center;
+    background-repeat: no-repeat;
+    background-size:100%;
+    
+}
+
+.black-background {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.25);
+  z-index: 1;
+}
+
+/*ポップアップ画面(WIN)*/
+
+.popup-win {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  transition: .3s;
+}
+.popup-win{
+  opacity: 1;
+  visibility: visible;
+}
+.popup-inner-win {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  width: 80%;
+  max-width: 80%;
+  z-index: 2;
+}
+.popup-inner-win img {
+  width: 100%;
+}
+.close-btn-win {
+    position: absolute;
+    left: 5%;
+    top: 1%;
+    height: 10%;
+    width: 10%;
+    outline:none;
+    border: none;
+    background-image:url('./img/nag_x_1208.png');
+    background-color: transparent;
+    background-position : center;
+    background-repeat: no-repeat;
+    background-size:100%;
+    
+}
+
+.black-background-win {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.1);
+  z-index: 1;
+}
+
+/*ローディング画面*/
+.loader {
+  -webkit-box-align: center;
+          align-items: center;
+  background: #fff;
+  bottom: 0;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 999;
+}
+.loader::after {
+  -webkit-animation: loader 0.5s linear infinite;
+          animation: loader 0.5s linear infinite;
+  border: 5px solid #FF998D;
+  border-radius: 50%;
+  border-right: 1px solid #FF998D;
+  border-top: 1px solid #FF998D;
+  content: "";
+  height: 70px;
+  width: 70px;
+}
+
+@-webkit-keyframes loader {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes loader {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+/*チュートリアル画面*/
+.tutorial{
+  position:relative;
+  width:100%;
+  height:100%;
+  background-position : center;
+  background-repeat: no-repeat;
+  background-size:100%;
+  background-color: transparent;
+}
+
+.tutorial_wrap{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+@media (min-height : 734px) {
+   /* iPhoneXに適用するスタイル */
+  header{
+    opacity: 0;
+    position: relative;
+    left: 0.5%;
+    top:6%;
+    padding:1%;
+    width: 99%;
+    height: 10%;
+  }
+   .container_badges{
+    position: relative;
+    padding:15% 1% 1% 1%;
+    width: 99%;
+    height: 89.4%;
+  }
+}
